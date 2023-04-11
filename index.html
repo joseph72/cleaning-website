@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg">
+      <nav class="z-1 top-0" id="navBg">
+        <div class="menu-container menu-wrapper">
+          <img class="logo flex-shrink" src="./jvk.svg" alt="" />
+          <ul class="flex flex-grow menu menu-case op" id="myTopnav">
+            <li class="menu-title">Home</li>
+            <div class="dropdown">
+              <li class="menu-title dropbtn">Features</li>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+
+            <li class="menu-title">About Us</li>
+            <div class="dropdown">
+              <li class="menu-title dropbtn">Services</li>
+              <div class="dropdown-content">
+                <a href="#">Cleaning Faq</a>
+                <a href="#">Our Process</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+
+            <li class="menu-title">Contacts</li>
+            <li class="menu-btn">(228) 9396-9393</li>
+          </ul>
+          <img
+            class="icons hamburger"
+            src="./hamburger.svg"
+            alt="hamburger menu"
+            onclick="menu()"
+          />
+        </div>
+      </nav>
+      <div class="svg">
+        <svg
+          id="wave"
+          style="transform: rotate(0deg); transition: 0.3s"
+          viewBox="0 0 1440 200"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+              <stop stop-color="rgba(54, 208, 196, 1)" offset="0%"></stop>
+              <stop stop-color="rgba(54, 208, 196, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            style="transform: translate(0, 0px); opacity: 1"
+            fill="url(#sw-gradient-0)"
+            d="M0,160L60,153.3C120,147,240,133,360,106.7C480,80,600,40,720,46.7C840,53,960,107,1080,126.7C1200,147,1320,133,1440,136.7C1560,140,1680,160,1800,140C1920,120,2040,60,2160,36.7C2280,13,2400,27,2520,33.3C2640,40,2760,40,2880,63.3C3000,87,3120,133,3240,140C3360,147,3480,113,3600,103.3C3720,93,3840,107,3960,120C4080,133,4200,147,4320,153.3C4440,160,4560,160,4680,156.7C4800,153,4920,147,5040,120C5160,93,5280,47,5400,26.7C5520,7,5640,13,5760,36.7C5880,60,6000,100,6120,126.7C6240,153,6360,167,6480,173.3C6600,180,6720,180,6840,170C6960,160,7080,140,7200,136.7C7320,133,7440,147,7560,130C7680,113,7800,67,7920,56.7C8040,47,8160,73,8280,90C8400,107,8520,113,8580,116.7L8640,120L8640,200L8580,200C8520,200,8400,200,8280,200C8160,200,8040,200,7920,200C7800,200,7680,200,7560,200C7440,200,7320,200,7200,200C7080,200,6960,200,6840,200C6720,200,6600,200,6480,200C6360,200,6240,200,6120,200C6000,200,5880,200,5760,200C5640,200,5520,200,5400,200C5280,200,5160,200,5040,200C4920,200,4800,200,4680,200C4560,200,4440,200,4320,200C4200,200,4080,200,3960,200C3840,200,3720,200,3600,200C3480,200,3360,200,3240,200C3120,200,3000,200,2880,200C2760,200,2640,200,2520,200C2400,200,2280,200,2160,200C2040,200,1920,200,1800,200C1680,200,1560,200,1440,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"
+          ></path>
+          <defs>
+            <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+              <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+              <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            style="transform: translate(0, 50px); opacity: 1"
+            fill="url(#sw-gradient-1)"
+            d="M0,120L60,120C120,120,240,120,360,103.3C480,87,600,53,720,43.3C840,33,960,47,1080,46.7C1200,47,1320,33,1440,36.7C1560,40,1680,60,1800,80C1920,100,2040,120,2160,130C2280,140,2400,140,2520,136.7C2640,133,2760,127,2880,120C3000,113,3120,107,3240,110C3360,113,3480,127,3600,123.3C3720,120,3840,100,3960,90C4080,80,4200,80,4320,83.3C4440,87,4560,93,4680,90C4800,87,4920,73,5040,73.3C5160,73,5280,87,5400,96.7C5520,107,5640,113,5760,103.3C5880,93,6000,67,6120,53.3C6240,40,6360,40,6480,63.3C6600,87,6720,133,6840,136.7C6960,140,7080,100,7200,70C7320,40,7440,20,7560,36.7C7680,53,7800,107,7920,130C8040,153,8160,147,8280,143.3C8400,140,8520,140,8580,140L8640,140L8640,200L8580,200C8520,200,8400,200,8280,200C8160,200,8040,200,7920,200C7800,200,7680,200,7560,200C7440,200,7320,200,7200,200C7080,200,6960,200,6840,200C6720,200,6600,200,6480,200C6360,200,6240,200,6120,200C6000,200,5880,200,5760,200C5640,200,5520,200,5400,200C5280,200,5160,200,5040,200C4920,200,4800,200,4680,200C4560,200,4440,200,4320,200C4200,200,4080,200,3960,200C3840,200,3720,200,3600,200C3480,200,3360,200,3240,200C3120,200,3000,200,2880,200C2760,200,2640,200,2520,200C2400,200,2280,200,2160,200C2040,200,1920,200,1800,200C1680,200,1560,200,1440,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <section style="padding-top: 5rem" class="opt-wrapper">
+      <div class="opt-pad">
+        <div class="opt-title">The Benefits of a Pre-Christmas Clean</div>
+        <div class="opt-container">
+          <div class="flex">
+            <span class="flex opt-sub">
+              <svg
+                enable-background="new 0 0 32 32"
+                height="12px"
+                id="Layer_1"
+                version="1.1"
+                viewBox="0 0 32 32"
+                width="32px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <style type="text/css">
+                  .st1 {
+                    fill: #fb7f7f;
+                  }
+                </style>
+                <g id="calendar_1_">
+                  <path
+                    class="st1"
+                    d="M29.334,3H25V1c0-0.553-0.447-1-1-1s-1,0.447-1,1v2h-6V1c0-0.553-0.448-1-1-1s-1,0.447-1,1v2H9V1   
+                  c0-0.553-0.448-1-1-1S7,0.447,7,1v2H2.667C1.194,3,0,4.193,0,5.666v23.667C0,30.806,1.194,32,2.667,32h26.667  
+                   C30.807,32,32,30.806,32,29.333V5.666C32,4.193,30.807,3,29.334,3z M30,29.333C30,29.701,29.701,30,29.334,30H2.667 
+                     C2.299,30,2,29.701,2,29.333V5.666C2,5.299,2.299,5,2.667,5H7v2c0,0.553,0.448,1,1,1s1-0.447,1-1V5h6v2c0,0.553,0.448,1,1,1 
+                    s1-0.447,1-1V5h6v2c0,0.553,0.447,1,1,1s1-0.447,1-1V5h4.334C29.701,5,30,5.299,30,5.666V29.333z"
+                    fill="#fb7f7f"
+                  />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="12" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="12" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="12" />
+                </g>
+              </svg>
+              <span style="color: #fb7f7f">6 February 2017</span>
+            </span>
+            <span style="margin-left: 1rem" class="flex opt-sub">
+              <svg
+                id="Layer_1"
+                enable-background="new 0 0 64 64"
+                height="12px"
+                version="1.1"
+                viewBox="0 0 64 64"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <style type="text/css">
+                  .st0 {
+                    fill: #36d0c4;
+                  }
+                </style>
+                <g>
+                  <g
+                    id="Icon-Comment"
+                    transform="translate(328.000000, 480.000000)"
+                  >
+                    <path
+                      class="st0"
+                      d="M-310-425.6h-2.5l1.5-2.1c1.1-1.6,1.9-3.5,2.3-6c-7.1-3.2-10.9-9.2-10.9-17.1  
+                       c0-12.1,9.1-19.6,23.8-19.6c14.7,0,23.8,7.5,23.8,19.6c0,12.2-8.9,19.6-23.8,19.6c-0.3,0-0.7,0-1,0   
+                         C-299.2-428.6-303.2-425.6-310-425.6L-310-425.6z M-296-467.8c-13.3,0-21.2,6.3-21.2,17c0,9.1,5.6,13.2,10.2,15.1l0.9,0.4l-0.1,1     c-0.3,2.3-0.8,4.3-1.6,6c4.8-0.6,7.6-3,9.1-5l0.4-0.5l0.9,0c0.4,0,0.9,0,1.3,0c19.1,0,21.2-11.9,21.2-17     C-274.8-461.4-282.7-467.8-296-467.8L-296-467.8z"
+                      id="Fill-59"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <span style="color: #36d0c4; margin-left: 4px">3 Comments</span>
+            </span>
+          </div>
+          <p style="padding: 0.5rem 0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            feugiat, arcu sed ornare facilisis, enim ipsum varius libero, eget
+            fermentum nisl dolor ac erat. Mauris suscipit massa lacus, ut
+            euismod tellus tincidunt at. Nunc lacus metus, ultrices eget ipsum
+            eget, egestas aliquet nisi. Proin iaculis nunc non ligula facilisis
+            ultricies. Nam eu venenatis nibh. Proin finibus a dui sed
+            facilisis.…
+          </p>
+          <button>Read More</button>
+        </div>
+      </div>
+      <div class="w-full flex">
+        <img class="opt-image" src="./clean1.jpg" alt="" />
+      </div>
+    </section>
+    <section class="opt-wrapper">
+      <div class="w-full flex">
+        <img class="opt-image" src="./clean2.jpg" alt="" />
+      </div>
+      <div class="opt-pad">
+        <div class="opt-title">The Benefits of a Pre-Christmas Clean</div>
+        <div class="opt-container">
+          <div class="flex">
+            <span class="flex opt-sub">
+              <svg
+                enable-background="new 0 0 32 32"
+                height="12px"
+                id="Layer_1"
+                version="1.1"
+                viewBox="0 0 32 32"
+                width="32px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <style type="text/css">
+                  .st1 {
+                    fill: #fb7f7f;
+                  }
+                </style>
+                <g id="calendar_1_">
+                  <path
+                    class="st1"
+                    d="M29.334,3H25V1c0-0.553-0.447-1-1-1s-1,0.447-1,1v2h-6V1c0-0.553-0.448-1-1-1s-1,0.447-1,1v2H9V1   
+                    c0-0.553-0.448-1-1-1S7,0.447,7,1v2H2.667C1.194,3,0,4.193,0,5.666v23.667C0,30.806,1.194,32,2.667,32h26.667  
+                     C30.807,32,32,30.806,32,29.333V5.666C32,4.193,30.807,3,29.334,3z M30,29.333C30,29.701,29.701,30,29.334,30H2.667 
+                       C2.299,30,2,29.701,2,29.333V5.666C2,5.299,2.299,5,2.667,5H7v2c0,0.553,0.448,1,1,1s1-0.447,1-1V5h6v2c0,0.553,0.448,1,1,1 
+                      s1-0.447,1-1V5h6v2c0,0.553,0.447,1,1,1s1-0.447,1-1V5h4.334C29.701,5,30,5.299,30,5.666V29.333z"
+                    fill="#fb7f7f"
+                  />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="12" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="12" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="12" />
+                </g>
+              </svg>
+              <span style="color: #fb7f7f">6 February 2017</span>
+            </span>
+            <span style="margin-left: 1rem" class="flex opt-sub">
+              <svg
+                id="Layer_1"
+                enable-background="new 0 0 64 64"
+                height="12px"
+                version="1.1"
+                viewBox="0 0 64 64"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <style type="text/css">
+                  .st0 {
+                    fill: #36d0c4;
+                  }
+                </style>
+                <g>
+                  <g
+                    id="Icon-Comment"
+                    transform="translate(328.000000, 480.000000)"
+                  >
+                    <path
+                      class="st0"
+                      d="M-310-425.6h-2.5l1.5-2.1c1.1-1.6,1.9-3.5,2.3-6c-7.1-3.2-10.9-9.2-10.9-17.1  
+                         c0-12.1,9.1-19.6,23.8-19.6c14.7,0,23.8,7.5,23.8,19.6c0,12.2-8.9,19.6-23.8,19.6c-0.3,0-0.7,0-1,0   
+                           C-299.2-428.6-303.2-425.6-310-425.6L-310-425.6z M-296-467.8c-13.3,0-21.2,6.3-21.2,17c0,9.1,5.6,13.2,10.2,15.1l0.9,0.4l-0.1,1     c-0.3,2.3-0.8,4.3-1.6,6c4.8-0.6,7.6-3,9.1-5l0.4-0.5l0.9,0c0.4,0,0.9,0,1.3,0c19.1,0,21.2-11.9,21.2-17     C-274.8-461.4-282.7-467.8-296-467.8L-296-467.8z"
+                      id="Fill-59"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <span style="color: #36d0c4; margin-left: 4px">3 Comments</span>
+            </span>
+          </div>
+          <p style="padding: 0.5rem 0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            feugiat, arcu sed ornare facilisis, enim ipsum varius libero, eget
+            fermentum nisl dolor ac erat. Mauris suscipit massa lacus, ut
+            euismod tellus tincidunt at. Nunc lacus metus, ultrices eget ipsum
+            eget, egestas aliquet nisi. Proin iaculis nunc non ligula facilisis
+            ultricies. Nam eu venenatis nibh. Proin finibus a dui sed
+            facilisis.…
+          </p>
+          <button>Read More</button>
+        </div>
+      </div>
+    </section>
+    <section class="opt-wrapper">
+      <div class="opt-pad">
+        <div class="opt-title">The Benefits of a Pre-Christmas Clean</div>
+        <div class="opt-container">
+          <div class="flex">
+            <span class="flex opt-sub">
+              <svg
+                enable-background="new 0 0 32 32"
+                height="12px"
+                id="Layer_1"
+                version="1.1"
+                viewBox="0 0 32 32"
+                width="32px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <style type="text/css">
+                  .st1 {
+                    fill: #fb7f7f;
+                  }
+                </style>
+                <g id="calendar_1_">
+                  <path
+                    class="st1"
+                    d="M29.334,3H25V1c0-0.553-0.447-1-1-1s-1,0.447-1,1v2h-6V1c0-0.553-0.448-1-1-1s-1,0.447-1,1v2H9V1   
+                    c0-0.553-0.448-1-1-1S7,0.447,7,1v2H2.667C1.194,3,0,4.193,0,5.666v23.667C0,30.806,1.194,32,2.667,32h26.667  
+                     C30.807,32,32,30.806,32,29.333V5.666C32,4.193,30.807,3,29.334,3z M30,29.333C30,29.701,29.701,30,29.334,30H2.667 
+                       C2.299,30,2,29.701,2,29.333V5.666C2,5.299,2.299,5,2.667,5H7v2c0,0.553,0.448,1,1,1s1-0.447,1-1V5h6v2c0,0.553,0.448,1,1,1 
+                      s1-0.447,1-1V5h6v2c0,0.553,0.447,1,1,1s1-0.447,1-1V5h4.334C29.701,5,30,5.299,30,5.666V29.333z"
+                    fill="#fb7f7f"
+                  />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="12" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="7" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="14" y="12" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="22" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="17" />
+                  <rect fill="#fb7f7f" height="3" width="4" x="21" y="12" />
+                </g>
+              </svg>
+              <span style="color: #fb7f7f">6 February 2017</span>
+            </span>
+            <span style="margin-left: 1rem" class="flex opt-sub">
+              <svg
+                id="Layer_1"
+                enable-background="new 0 0 64 64"
+                height="12px"
+                version="1.1"
+                viewBox="0 0 64 64"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <style type="text/css">
+                  .st0 {
+                    fill: #36d0c4;
+                  }
+                </style>
+                <g>
+                  <g
+                    id="Icon-Comment"
+                    transform="translate(328.000000, 480.000000)"
+                  >
+                    <path
+                      class="st0"
+                      d="M-310-425.6h-2.5l1.5-2.1c1.1-1.6,1.9-3.5,2.3-6c-7.1-3.2-10.9-9.2-10.9-17.1  
+                         c0-12.1,9.1-19.6,23.8-19.6c14.7,0,23.8,7.5,23.8,19.6c0,12.2-8.9,19.6-23.8,19.6c-0.3,0-0.7,0-1,0   
+                           C-299.2-428.6-303.2-425.6-310-425.6L-310-425.6z M-296-467.8c-13.3,0-21.2,6.3-21.2,17c0,9.1,5.6,13.2,10.2,15.1l0.9,0.4l-0.1,1     c-0.3,2.3-0.8,4.3-1.6,6c4.8-0.6,7.6-3,9.1-5l0.4-0.5l0.9,0c0.4,0,0.9,0,1.3,0c19.1,0,21.2-11.9,21.2-17     C-274.8-461.4-282.7-467.8-296-467.8L-296-467.8z"
+                      id="Fill-59"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <span style="color: #36d0c4; margin-left: 4px">3 Comments</span>
+            </span>
+          </div>
+          <p style="padding: 0.5rem 0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            feugiat, arcu sed ornare facilisis, enim ipsum varius libero, eget
+            fermentum nisl dolor ac erat. Mauris suscipit massa lacus, ut
+            euismod tellus tincidunt at. Nunc lacus metus, ultrices eget ipsum
+            eget, egestas aliquet nisi. Proin iaculis nunc non ligula facilisis
+            ultricies. Nam eu venenatis nibh. Proin finibus a dui sed
+            facilisis.…
+          </p>
+          <button>Read More</button>
+        </div>
+      </div>
+      <div class="w-full flex">
+        <img class="opt-image" src="./clean1.jpg" alt="" />
+      </div>
+    </section>
+    <section>
+      <div class="footer-svg">
+        <svg
+          id="wave"
+          style="transform: rotate(0deg); transition: 0.3s"
+          viewBox="0 0 1440 290"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+              <stop stop-color="rgba(27, 104, 95, 1)" offset="0%"></stop>
+              <stop stop-color="rgba(27, 104, 95, 1)" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            style="transform: translate(0, 0px); opacity: 1"
+            fill="#1e3633"
+            d="M0,0L120,0C240,0,480,0,720,29C960,58,1200,116,1440,140.2C1680,164,1920,155,2160,125.7C2400,97,2640,48,2880,24.2C3120,0,3360,0,3600,9.7C3840,19,4080,39,4320,62.8C4560,87,4800,116,5040,149.8C5280,184,5520,222,5760,203C6000,184,6240,106,6480,87C6720,68,6960,106,7200,101.5C7440,97,7680,48,7920,62.8C8160,77,8400,155,8640,188.5C8880,222,9120,213,9360,212.7C9600,213,9840,222,10080,193.3C10320,164,10560,97,10800,62.8C11040,29,11280,29,11520,48.3C11760,68,12000,106,12240,140.2C12480,174,12720,203,12960,193.3C13200,184,13440,135,13680,140.2C13920,145,14160,203,14400,227.2C14640,251,14880,242,15120,212.7C15360,184,15600,135,15840,120.8C16080,106,16320,126,16560,111.2C16800,97,17040,48,17160,24.2L17280,0L17280,290L17160,290C17040,290,16800,290,16560,290C16320,290,16080,290,15840,290C15600,290,15360,290,15120,290C14880,290,14640,290,14400,290C14160,290,13920,290,13680,290C13440,290,13200,290,12960,290C12720,290,12480,290,12240,290C12000,290,11760,290,11520,290C11280,290,11040,290,10800,290C10560,290,10320,290,10080,290C9840,290,9600,290,9360,290C9120,290,8880,290,8640,290C8400,290,8160,290,7920,290C7680,290,7440,290,7200,290C6960,290,6720,290,6480,290C6240,290,6000,290,5760,290C5520,290,5280,290,5040,290C4800,290,4560,290,4320,290C4080,290,3840,290,3600,290C3360,290,3120,290,2880,290C2640,290,2400,290,2160,290C1920,290,1680,290,1440,290C1200,290,960,290,720,290C480,290,240,290,120,290L0,290Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <section class="last-footer">
+      <svg
+        id="wave"
+        style="transform: rotate(0deg); transition: 0.3s"
+        viewBox="0 0 1440 290"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(26, 48, 45, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(26, 48, 45, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          style="transform: translate(0, 0px); opacity: 1; width: 100%"
+          fill="#1A302D"
+          d="M0,87L120,106.3C240,126,480,164,720,188.5C960,213,1200,222,1440,207.8C1680,193,1920,155,2160,120.8C2400,87,2640,58,2880,53.2C3120,48,3360,68,3600,67.7C3840,68,4080,48,4320,67.7C4560,87,4800,145,5040,140.2C5280,135,5520,68,5760,72.5C6000,77,6240,155,6480,174C6720,193,6960,155,7200,159.5C7440,164,7680,213,7920,227.2C8160,242,8400,222,8640,188.5C8880,155,9120,106,9360,106.3C9600,106,9840,155,10080,145C10320,135,10560,68,10800,72.5C11040,77,11280,155,11520,154.7C11760,155,12000,77,12240,67.7C12480,58,12720,116,12960,135.3C13200,155,13440,135,13680,116C13920,97,14160,77,14400,62.8C14640,48,14880,39,15120,33.8C15360,29,15600,29,15840,24.2C16080,19,16320,10,16560,43.5C16800,77,17040,155,17160,193.3L17280,232L17280,290L17160,290C17040,290,16800,290,16560,290C16320,290,16080,290,15840,290C15600,290,15360,290,15120,290C14880,290,14640,290,14400,290C14160,290,13920,290,13680,290C13440,290,13200,290,12960,290C12720,290,12480,290,12240,290C12000,290,11760,290,11520,290C11280,290,11040,290,10800,290C10560,290,10320,290,10080,290C9840,290,9600,290,9360,290C9120,290,8880,290,8640,290C8400,290,8160,290,7920,290C7680,290,7440,290,7200,290C6960,290,6720,290,6480,290C6240,290,6000,290,5760,290C5520,290,5280,290,5040,290C4800,290,4560,290,4320,290C4080,290,3840,290,3600,290C3360,290,3120,290,2880,290C2640,290,2400,290,2160,290C1920,290,1680,290,1440,290C1200,290,960,290,720,290C480,290,240,290,120,290L0,290Z"
+        ></path>
+      </svg>
+    </section>
+    <footer class="site-footer">
+      <div class="container" style="margin-bottom: 6rem">
+        <div class="grid-footer menu-wrapper">
+          <div>
+            <img
+              style="padding: 0; padding-bottom: 20px"
+              class="logo flex-shrink"
+              src="/jvk.svg"
+              alt=""
+            />
+            <p style="margin-top: 0rem">
+              With over 10 years of experience in the cleaning industry our
+              reputation has grown and grown. And we owe it all to you, our
+              clients.
+            </p>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <h6>Features</h6>
+            <ul>
+              <li>Residential</li>
+              <li>Comercial</li>
+              <li>Public</li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="http://scanfcode.com/category/c-language/">Home</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/front-end-development/"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/back-end-development/"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/android/">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Contact Info</h6>
+            <ul class="footer-links">
+              <li>Jk Victoria center sarl u Lome togo 03 bp 153</li>
+
+              <li>Sitemap</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container menu-wrapper">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2017 All Rights Reserved by
+              <a href="#">Scanfcode</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12"></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var navbar = document.querySelector("nav");
+      window.onscroll = function () {
+        // pageYOffset or scrollY
+        if (window.pageYOffset > 0) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      };
+      function menu() {
+        var y = document.getElementById("navBg");
+        var x = document.getElementById("myTopnav");
+        if (y.className === "obj") {
+          y.className += " obj-none";
+        }
+        if (x.className === "menu-case") {
+          x.className += " show";
+        } else {
+          x.className = "menu-case";
+          y.className = "obj";
+        }
+      }
+    </script>
+  </body>
+</html>
